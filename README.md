@@ -2,24 +2,6 @@
 
 > Official PyTorch implementation of "HPFG: Semi-Supervised Medical Image Segmentation Framework based on Hybrid Pseudo-Labeling and Feature-Guided"
 
-
-
-## 🏷️Support
-
-Currently, we have implemented 7 popular semi supervised medical image segmentation algorithms.
-
-| Date    | Name         | Title                                                        | Reference |
-| ------- | ------------ | ------------------------------------------------------------ | --------- |
-| 2017-03 | Mean-Teacher | [Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results](https://arxiv.org/abs/1703.01780) | NeurlPS   |
-| 2019-07 | UAMT         | [Uncertainty-aware Self-ensembling Model for Semi-supervised 3D Left Atrium Segmentation](https://arxiv.org/abs/1907.07034) | MICCAI    |
-| 2021-06 | CPS          | [Semi-Supervised Semantic Segmentation with Cross Pseudo Supervision](https://arxiv.org/abs/2106.01226) | CVPR      |
-| 2021-12 | CTCT         | [Semi-Supervised Medical Image Segmentation via Cross Teaching between CNN and Transformer](https://arxiv.org/abs/2112.0489) | MIDL      |
-| 2022-02 | ICT-MegSeg   | [AN EMBARRASSINGLY SIMPLE CONSISTENCY REGULARIZATION METHOD FOR SEMI-SUPERVISED MEDICAL IMAGE SEGMENTATION](https://arxiv.org/abs/2202.00677) | ISBI      |
-| 2022-03 | SSNet        | [Exploring Smoothness and Class-Separation for Semi-supervised Medical Image Segmentation](https://arxiv.org/abs/2203.01324v3) | MICCAI    |
-| 2022-08 | S4CVNet      | [When CNN Meet with ViT: Towards Semi-Supervised Learning for Multi-Class Medical Image Semantic Segmentation](https://arxiv.org/abs/2208.06449) | CVPR      |
-
-
-
 ## 🛠️ Install 
 
 If it is a pip environment, run the following command
@@ -84,6 +66,22 @@ If you want to run the paper project, please run the following code directly
 ~~~python
 python main.py
 ~~~
+
+
+
+## 🏷️Support
+
+Currently, we have implemented 7 popular semi supervised medical image segmentation algorithms.
+
+| Date    | Name         | Title                                                        | Reference |
+| ------- | ------------ | ------------------------------------------------------------ | --------- |
+| 2017-03 | Mean-Teacher | [Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results](https://arxiv.org/abs/1703.01780) | NeurlPS   |
+| 2019-07 | UAMT         | [Uncertainty-aware Self-ensembling Model for Semi-supervised 3D Left Atrium Segmentation](https://arxiv.org/abs/1907.07034) | MICCAI    |
+| 2021-06 | CPS          | [Semi-Supervised Semantic Segmentation with Cross Pseudo Supervision](https://arxiv.org/abs/2106.01226) | CVPR      |
+| 2021-12 | CTCT         | [Semi-Supervised Medical Image Segmentation via Cross Teaching between CNN and Transformer](https://arxiv.org/abs/2112.0489) | MIDL      |
+| 2022-02 | ICT-MegSeg   | [AN EMBARRASSINGLY SIMPLE CONSISTENCY REGULARIZATION METHOD FOR SEMI-SUPERVISED MEDICAL IMAGE SEGMENTATION](https://arxiv.org/abs/2202.00677) | ISBI      |
+| 2022-03 | SSNet        | [Exploring Smoothness and Class-Separation for Semi-supervised Medical Image Segmentation](https://arxiv.org/abs/2203.01324v3) | MICCAI    |
+| 2022-08 | S4CVNet      | [When CNN Meet with ViT: Towards Semi-Supervised Learning for Multi-Class Medical Image Semantic Segmentation](https://arxiv.org/abs/2208.06449) | CVPR      |
 
 
 
