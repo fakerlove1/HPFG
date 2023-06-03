@@ -1,0 +1,36 @@
+# 数据集配置
+datasets: "sup_building"
+num_classes: 2
+data_path: "/home/ubuntu/data/Ali_building_2class"
+save_path: "checkpoint/2023-04_11_pretrain_segformer_plus_80k_512x512_ISIC"
+name: "cutout_plus_30k_512x512_ISIC"
+ckpt: None
+cuda: True
+train_crop_size: [512,512]
+test_crop_size: [512,512]
+crop_val: False
+batch_size: 12
+num_workers: 4
+in_channels: 3
+
+
+consistency: 0.1
+consistency_rampup: 200.0
+ema_decay: 0.99
+
+# 模型配置
+model: "segformer_plus"
+seed: 1337
+# 模型训练 配置
+total_itrs: 80000
+step_size: 2000
+
+# 优化器训练配置
+opt: "adamW"
+lr: 0.0008
+weight_decay: 0.05
+momentum: 0.9
+sched: "cosine"
+warmup_epochs: 1
+warmup_lr: 0.00001
+min_lr: 0.000001

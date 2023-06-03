@@ -1,0 +1,85 @@
+# 数据集配置
+datasets: "sup_isic"
+num_classes: 2
+data_path: "/home/ubuntu/data/ISIC2018_224"
+save_path: "checkpoint/2023-03-16_pretrain_unet_plus_30k_224x224_ISIC"
+name: "cutout_plus_30k_224x224_ISIC"
+ckpt: None
+cuda: True
+train_crop_size: [224,224]
+test_crop_size: [224,224]
+crop_val: False
+batch_size: 8
+unlabel_batch_size: 24
+num_workers: 4
+in_channels: 3
+
+# 模型配置
+model: "unet_plus"
+seed: 1337
+total_itrs: 30000
+step_size: 1500
+
+pretrain_cfg:
+  batch_size: 8
+  unlabel_batch_size: 24
+  num_classes: 2
+  consistency: 0.1
+  consistency_rampup: 200.0
+  ema_decay: 0.99
+  total_itrs: 30000
+  step_size: 1500
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0001
+  momentum: 0.9
+  sched: "cosine"
+  warmup_epochs: 0
+  warmup_lr: 0.0001
+  min_lr: 0.000001
+
+finetune_cfg:
+  batch_size: 24
+  num_classes: 2
+  consistency: 0.1
+  consistency_rampup: 200.0
+  ema_decay: 0.99
+  total_itrs: 30000
+  step_size: 1500
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0005
+  momentum: 0.9
+  sched: "cosine"
+  warmup_epochs: 0
+  warmup_lr: 0.0001
+  min_lr: 0.000001
+
+# 优化器训练配置
+# opt: "adamW"
+# lr: 0.001
+# weight_decay: 0.05
+# momentum: 0.9
+# sched: "cosine"
+# warmup_epochs: 0
+# warmup_lr: 0.00001
+# min_lr: 0.000001
+
+# 优化器训练配置
+opt: "sgd"
+lr: 0.01
+weight_decay: 0.0001
+momentum: 0.9
+sched: "cosine"
+warmup_epochs: 0
+warmup_lr: 0.0001
+min_lr: 0.000001
+
+# opt: "adam"
+# lr: 0.05
+# weight_decay: 0.0001
+# momentum: 0.9
+# sched: "medical"
+# warmup_epochs: 1
+# warmup_lr: 0.0001
+# min_lr: 0.000001

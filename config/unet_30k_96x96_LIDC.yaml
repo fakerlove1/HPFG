@@ -1,0 +1,46 @@
+# 数据集配置
+datasets: "sup_lidc"
+num_classes: 2
+data_path: "/home/ubuntu/data/LIDC/LIDC-DIC"
+save_path: "checkpoint/2023-02-15-unet_30k_96x96_lidc"
+name: "unet_30k_96x96_lidc"
+ckpt: None
+cuda: True
+train_crop_size: [96,96]
+test_crop_size: [96,96]
+crop_val: False
+batch_size: 32
+num_workers: 4
+in_channels: 3
+
+# 模型配置
+model: "unet_lidc"
+variant: "unet_lidc"
+pretrained: False
+seed: 1
+# 模型训练 配置
+process: True # 是否显示进度条
+total_itrs: 30000
+step_size: 1500
+
+# 优化器训练配置
+opt: "sgd"
+lr: 0.01
+weight_decay: 0.0005
+momentum: 0.9
+sched: "cosine"
+warmup_epochs: 0
+warmup_lr: 0.0001
+min_lr: 0.000001
+
+# 优化器训练配置
+# opt: "adamW"
+# lr: 0.0001
+# weight_decay: 0.01
+# momentum: 0.9
+# sched: "cosine"
+# warmup_epochs: 1
+# warmup_lr: 0.0001
+# min_lr: 0.000001
+
+

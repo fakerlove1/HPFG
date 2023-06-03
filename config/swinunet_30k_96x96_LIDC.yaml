@@ -1,0 +1,55 @@
+# 数据集配置
+datasets: "sup_lidc"
+num_classes: 2
+data_path: "/home/ubuntu/data/LIDC/LIDC-DIC"
+save_path: "checkpoint/2023-02-13-swinunet_30k_96x96_LIDC"
+name: "swinunet_30k_96x96_LIDC"
+ckpt: None
+cuda: True
+train_crop_size: [96,96]
+test_crop_size: [96,96]
+crop_val: False
+batch_size: 64
+num_workers: 4
+in_channels: 3
+
+# 模型配置
+model: "swinunet_lidc"
+variant: "swinunet_lidc"
+pretrained: False
+seed: 1337
+# 模型训练 配置
+process: True # 是否显示进度条
+total_itrs: 30000
+step_size: 1500
+freeze_train: False
+unfreeze_itrs: 10000
+
+# 优化器训练配置
+opt: "adamW"
+lr: 0.0005
+weight_decay: 0.05
+momentum: 0.9
+sched: "cosine"
+warmup_epochs: 1
+warmup_lr: 0.00001
+min_lr: 0.000001
+
+# 优化器训练配置
+# opt: "sgd"
+# lr: 0.05
+# weight_decay: 0.0001
+# momentum: 0.9
+# sched: "poly"
+# warmup_epochs: 1
+# warmup_lr: 0.0001
+# min_lr: 0.000001
+
+# opt: "adam"
+# lr: 0.05
+# weight_decay: 0.0001
+# momentum: 0.9
+# sched: "medical"
+# warmup_epochs: 1
+# warmup_lr: 0.0001
+# min_lr: 0.000001

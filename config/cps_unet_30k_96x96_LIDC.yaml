@@ -1,0 +1,74 @@
+# 数据集配置
+datasets: "lidc"
+num_classes: 2
+data_path: "/home/ubuntu/data/LIDC/LIDC-DIC"
+save_path: "checkpoint/2023-03-14-CPS-LIDC"
+name: "CPS-LIDC"
+ckpt: None
+cuda: True
+
+train_crop_size: [96,96]
+test_crop_size: [96,96]
+crop_val: False
+batch_size: 8
+unlabel_batch_size: 24
+num_workers: 4
+label_num: 0.05
+consistency: 0.1
+consistency_rampup: 200.0
+ema_decay: 0.99
+
+# 模型配置
+model: "unet"
+variant: "unet"
+in_channels: 1
+seed: 1337
+total_itrs: 30000
+step_size: 1500
+
+
+model1:
+  model: "unet"
+  in_channels: 3
+  num_classes: 2
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0001
+  momentum: 0.9
+  sched: "medical"
+  warmup_epochs: 0
+  warmup_lr: 0.0001
+  cooldown_epochs: 10
+  min_lr: 0.000001
+  total_itrs: 30000
+  step_size: 1500
+
+model2:
+  model: "unet"
+  in_channels: 3
+  num_classes: 2
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0001
+  momentum: 0.9
+  sched: "medical"
+  warmup_epochs: 0
+  warmup_lr: 0.0001
+  cooldown_epochs: 10
+  min_lr: 0.000001
+  total_itrs: 30000
+  step_size: 1500
+
+
+# 优化器训练配置
+opt: "sgd"
+lr: 0.01
+weight_decay: 0.0001
+momentum: 0.9
+sched: "medical"
+warmup_epochs: 0
+warmup_lr: 0.0001
+cooldown_epochs: 10
+min_lr: 0.000001
+
+

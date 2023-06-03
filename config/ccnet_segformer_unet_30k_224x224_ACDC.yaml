@@ -1,0 +1,119 @@
+# 数据集配置
+datasets: "acdc"
+num_classes: 4
+data_path: "/home/ubuntu/data/ACDC"
+save_path: "checkpoint/2023-03_28-S4CVnet-ACDC"
+name: "CCNet-ACDC"
+ckpt: None
+cuda: True
+
+train_crop_size: [224,224]
+test_crop_size: [224,224]
+crop_val: False
+batch_size: 8
+unlabel_batch_size: 24
+num_workers: 4
+
+label_num: 0.05
+consistency: 0.1
+consistency_rampup: 200.0
+ema_decay: 0.99
+
+# 模型配置
+model1:
+  model: "unet_plus"
+  variant: "unet"
+  in_channels: 1
+  num_classes: 4
+  # 优化器训练配置
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0005
+  momentum: 0.9
+  sched: "medical"
+  warmup_epochs: 1
+  warmup_lr: 0.0001
+  cooldown_epochs: 10
+  min_lr: 0.000001
+  total_itrs: 30000
+  step_size: 1500
+
+
+model2:
+  model: "unet_plus"
+  variant: "unet"
+  in_channels: 1
+  num_classes: 4
+  # 优化器训练配置
+  opt: "sgd"
+  lr: 0.01
+  weight_decay: 0.0005
+  momentum: 0.9
+  sched: "medical"
+  warmup_epochs: 1
+  warmup_lr: 0.0001
+  cooldown_epochs: 10
+  min_lr: 0.000001
+  total_itrs: 30000
+  step_size: 1500
+
+
+# model1:
+#   model: "segformer_plus"
+#   variant: "segformer"
+#   in_channels: 1
+#   num_classes: 4
+#   train_crop_size: [224,224]
+#   # 优化器训练配置
+#   opt: "adamW"
+#   lr: 0.0008
+#   weight_decay: 0.05
+#   momentum: 0.9
+#   sched: "medical"
+#   warmup_epochs: 1
+#   warmup_lr: 0.00001
+#   cooldown_epochs: 10
+#   min_lr: 0.000001
+#   total_itrs: 30000
+#   step_size: 1500
+
+# model2:
+#   model: "segformer_plus"
+#   variant: "segformer"
+#   in_channels: 1
+#   num_classes: 4
+#   train_crop_size: [224,224]
+#   # 优化器训练配置
+#   opt: "adamW"
+#   lr: 0.0008
+#   weight_decay: 0.05
+#   momentum: 0.9
+#   sched: "medical"
+#   warmup_epochs: 1
+#   warmup_lr: 0.00001
+#   cooldown_epochs: 10
+#   min_lr: 0.000001
+#   total_itrs: 30000
+#   step_size: 1500
+
+
+pretrained: True
+seed: 1
+process: True # 是否显示进度条
+total_itrs: 30000
+step_size: 1500
+freeze_train: False
+unfreeze_itrs: 10000
+
+
+
+# 优化器训练配置
+opt: "sgd"
+lr: 0.01
+weight_decay: 0.0005
+momentum: 0.9
+sched: "medical"
+warmup_epochs: 1
+warmup_lr: 0.0001
+cooldown_epochs: 10
+min_lr: 0.000001
