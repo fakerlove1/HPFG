@@ -11,7 +11,7 @@ Currently, we have implemented 7 popular semi supervised medical image segmentat
 | Date    | Name         | Title                                                        | Reference |
 | ------- | ------------ | ------------------------------------------------------------ | --------- |
 | 2017-03 | Mean-Teacher | [Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results](https://arxiv.org/abs/1703.01780) | NeurlPS   |
-| 2019-07 | UAMT         | [Uncertainty-aware Self-ensembling Model for Semi-supervised 3D Left Atrium Segmentation (arxiv.org)](https://arxiv.org/abs/1907.07034) | MICCAI    |
+| 2019-07 | UAMT         | [Uncertainty-aware Self-ensembling Model for Semi-supervised 3D Left Atrium Segmentation](https://arxiv.org/abs/1907.07034) | MICCAI    |
 | 2021-06 | CPS          | [Semi-Supervised Semantic Segmentation with Cross Pseudo Supervision](https://arxiv.org/abs/2106.01226) | CVPR      |
 | 2021-12 | CTCT         | [Semi-Supervised Medical Image Segmentation via Cross Teaching between CNN and Transformer](https://arxiv.org/abs/2112.0489) | MIDL      |
 | 2022-02 | ICT-MegSeg   | [AN EMBARRASSINGLY SIMPLE CONSISTENCY REGULARIZATION METHOD FOR SEMI-SUPERVISED MEDICAL IMAGE SEGMENTATION](https://arxiv.org/abs/2202.00677) | ISBI      |
