@@ -1,0 +1,17 @@
+data
+data/
+test
+test/
+.idea/ 
+.git
+.git/
+*.pkl
+*.pth
+__pycache__            
+__pycache__/
+          
+checkpoint
+checkpoint/
+*.out
+*.ckpt
+*.zip

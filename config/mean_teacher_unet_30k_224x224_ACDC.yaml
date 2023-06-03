@@ -1,11 +1,11 @@
-# 数据集配置
-datasets: "acdc"
-num_classes: 4
-data_path: "/home/ubuntu/data/ACDC"
-save_path: "checkpoint/2023-02-26-mean_teacher-ACDC"
+# Dataset Configuration
+datasets: "acdc" # Dataset name
+num_classes: 4 # Number of categories
+data_path: "/home/ubuntu/data/ACDC" # Dataset placement location
+save_path: "checkpoint/2023-02-26-mean_teacher-ACDC" # Code Save Location
 name: "mean_teacher-ACDC"
-ckpt: None
-cuda: True
+ckpt: None # Pre-training weight position
+cuda: True # Whether to use GPU
 
 train_crop_size: [224,224]
 test_crop_size: [224,224]
@@ -36,6 +36,3 @@ warmup_epochs: 0
 warmup_lr: 0.0001
 cooldown_epochs: 10
 min_lr: 0.000001
-
-
-

@@ -13,9 +13,6 @@ from model import build_model
 from datasets import build_loader
 from val import test_acdc
 
-# paper link https://arxiv.org/abs/2202.00677
-
-
 def main():
     path = r"config/uncertainty_aware_unet_30k_224x224_ACDC.yaml"
     root = os.path.dirname(os.path.realpath(__file__))  # 获取绝对路径

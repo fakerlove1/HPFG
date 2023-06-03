@@ -4,8 +4,6 @@ import torch
 from copy import deepcopy
 from tensorboardX import SummaryWriter
 
-
-
 from train import supervise, ICT_MedSeg
 from utils import loadyaml,_get_logger, mk_path
 from model import get_model
